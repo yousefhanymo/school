@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة يوسف للمذاكرة</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; text-align: center; padding: 20px; margin: 0; }
+        h1 { color: #2c3e50; font-size: 26px; margin-bottom: 20px; border-bottom: 3px solid #3498db; display: inline-block; padding-bottom: 5px; }
+        h2 { color: #7f8c8d; font-size: 18px; text-align: right; max-width: 500px; margin: 15px auto 5px auto; padding-right: 10px; }
+        .container { max-width: 500px; margin: 0 auto; background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .section { margin-bottom: 20px; padding: 10px; border-radius: 8px; background-color: #fafafa; }
+        .study-sec { border-right: 5px solid #2ecc71; }
+        .social-sec { border-right: 5px solid #3498db; }
+        .btn { display: block; width: 85%; margin: 10px auto; padding: 12px; color: white; text-decoration: none; border-radius: 8px; font-size: 16px; font-weight: bold; transition: background 0.2s; }
+        .btn-study { background-color: #2ecc71; }
+        .btn-study:hover { background-color: #27ae60; }
+        .btn-social { background-color: #3498db; }
+        .btn-social:hover { background-color: #2980b9; }
+        footer { margin-top: 20px; color: #bdc3c7; font-size: 11px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>بوابة المذاكرة الآمنة</h1>
+        
+        <h2>منصات الدراسة والمذاكرة:</h2>
+        <div class="section study-sec">
+            <a class="btn btn-study" href="https://bassthalk.com" onclick="return checkLink(this.href)">منصة بسطتهالك (الموقع الرسمي)</a>
+            <a class="btn btn-study" href="https://mohammed-ayman.com" onclick="return checkLink(this.href)">منصة د. محمد أيمن (الموقع الرسمي)</a>
+            <a class="btn btn-study" href="https://manahig.com" onclick="return checkLink(this.href)">منصة مناهج التعليمية</a>
+            <a class="btn btn-study" href="https://abwab.com" onclick="return checkLink(this.href)">منصة أبواب</a>
+            <a class="btn btn-study" href="https://studyzone.edu" onclick="return checkLink(this.href)">Study Zone</a>
+        </div>
+
+        <h2>موقع التواصل والترفيه المسموحة:</h2>
+        <div class="section social-sec">
+            <a class="btn btn-social" href="https://whatsapp.com" onclick="return checkLink(this.href)">واتساب ويب</a>
+            <a class="btn btn-social" href="https://facebook.com" onclick="return checkLink(this.href)">فيسبوك</a>
+            <a class="btn btn-social" href="https://telegram.org" onclick="return checkLink(this.href)">تليجرام ويب</a>
+            <a class="btn btn-social" href="https://youtube.com" onclick="return checkLink(this.href)">يوتيوب</a>
+            <a class="btn btn-social" href="https://tiktok.com" onclick="return checkLink(this.href)">تيك توك</a>
+        </div>
+    </div>
+
+    <footer>نظام حماية مفعّل لجلسة المذاكرة الحالية</footer>
+
+    <script>
+        function checkLink(url) {
+            const forbiddenKeywords = ['porn', 'xxx', 'sex', 'adult', 'xvideos', 'pornhub', 'إباحي', 'جنس', 'افلام+18'];
+            const lowerUrl = url.toLowerCase();
+            for (let i = 0; i < forbiddenKeywords.length; i++) {
+                if (lowerUrl.indexOf(forbiddenKeywords[i]) !== -1) {
+                    alert('عذراً، هذا الرابط محظور تلقائياً لحمايتك أثناء المذاكرة!');
+                    return false; 
+                }
+            }
+            return true; 
+        }
+    </script>
+
+</body>
+</html>
